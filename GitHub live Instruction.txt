@@ -1,0 +1,5 @@
+Things need to do inorder to make the app live in gitHub--
+
+step 1---ng add angular-cli-ghpages
+step 2---ng build --base-href "https://Ezaz-Ahmad.github.io/Appointment-Manager-Application-Angular/"
+step 3---npx angular-cli-ghpages --dir=dist/appointment-app
