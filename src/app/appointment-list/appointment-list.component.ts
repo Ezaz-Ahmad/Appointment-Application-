@@ -10,6 +10,7 @@ import { OnInit } from '@angular/core';///use for displaying the jason file wher
 export class AppointmentListComponent implements OnInit {
   
   newAppointmentTitle : string = "" ;
+  newAppointmentDescription : string =" ";
   newAppointmentDate : Date = new Date ();
   appointments : Appointment[]= []
 
@@ -26,12 +27,14 @@ addAppointment()////method for creating and showing new appointments
   let newAppointment : Appointment={
     id:Date.now(),
     title:this.newAppointmentTitle,
+    description :this.newAppointmentDescription,
     date: this.newAppointmentDate
   }
 
   this.appointments.push(newAppointment)//pusshing the newappointment schedule
 
   this.newAppointmentTitle= "";//reseting the title field
+  this.newAppointmentDescription= "";
   this.newAppointmentDate= new Date();//resetting the date field
   localStorage.setItem("appointments",JSON.stringify(this.appointments))//saving data into local storage
 
