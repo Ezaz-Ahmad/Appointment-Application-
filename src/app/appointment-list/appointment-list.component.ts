@@ -35,7 +35,7 @@ addAppointment()////method for creating and showing new appointments
   this.newAppointmentDate= new Date();//resetting the date field
   localStorage.setItem("appointments",JSON.stringify(this.appointments))//saving data into local storage
 
-  alert(this.appointments.length)//showing the alert 
+  alert("Data has been saved successfully!!");//showing the alert 
  }
 }
 
@@ -43,5 +43,6 @@ deletAppointment(index: number)//deleting any specific appointment
 {
   this.appointments.splice(index, 1)
   localStorage.setItem("appointments",JSON.stringify(this.appointments))//deleting and replacing the local storage data
+  alert("Deleted");//showing the alert 
 }
 }
